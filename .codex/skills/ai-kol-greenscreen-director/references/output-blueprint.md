@@ -9,6 +9,9 @@
 **人物与构图 (Character & Composition)：**  
 [用中文扩写人物外观、服装、年龄气质、面部表现和画面构图。必须强调：中景、直视镜头、面部是唯一视觉中心、前 3 秒不出现手机、背景无人物、无杂物、无立柱。]
 
+**真人口播表现 (Performance)：**  
+[用中文说明人物要像真实 KOL 口播：眼神灵动、有自然微表情、轻微头部倾斜、肩颈放松、身体轻微前倾、嘴型处在真实说话中，避免僵硬摆拍、蜡像感、证件照感。]
+
 **场景与光影 (Atmosphere)：**  
 [用中文扩写场景布置与灯光。必须把用户场景净化为干净、可控、低干扰的背景，强调柔和环境光、电影感补光、背景不抢焦。]
 
@@ -33,9 +36,9 @@
 
 ---
 
-## 📱 第二步：视频动作与焦点转移 Prompt (Step 2: I2V Motion)
+## 📱 第二步：Midjourney 拿手机展示图 (Step 2: Phone Holding Still)
 
-> 将第一步生成的首帧图作为视频模型输入，再使用此 Prompt 控制动作与焦点转移。
+> 额外用此 Prompt 生成一张人物拿着纯绿幕手机的图片。此图用于终帧参考、展示姿势参考或素材扩展，不能替代第一步视频首帧。
 
 ```text
 [套用 references/prompt-formula.md 的 Step 2 模板，填入扩写后的人物与场景]
@@ -49,13 +52,31 @@
 
 ---
 
+## 🎥 第三步：视频动作与焦点转移 Prompt (Step 3: I2V Motion)
+
+> 将第一步生成的首帧图作为视频模型输入，再使用此 Prompt 控制动作与焦点转移。
+
+```text
+[套用 references/prompt-formula.md 的 Step 3 模板，填入扩写后的人物与场景]
+```
+
+**Negative Prompt：**
+
+```text
+[套用 references/prompt-formula.md 的 Step 3 Negative Prompt 建议]
+```
+
+---
+
 ## ✅ 抽卡注意事项 (Execution Notes)
 
 - 如果手机在开头就出现：重抽或加强 `no smartphone visible at the beginning`。
+- 如果人物看起来呆板：加强 `authentic creator energy, lively eyes, subtle micro-expressions, spontaneous mid-speech expression, slight head tilt, relaxed shoulders`。
 - 如果人脸在结尾仍比手机清晰：加强 `rack focus shifts from face to green smartphone screen`。
 - 如果背景出现人物或立柱：加强 `no background characters, no columns, no poles, no vertical obstructions`。
 - 如果绿幕不够纯：加强 `perfectly flat, completely solid, bright chroma key green, evenly lit`。
 - 如果手部畸形：增加 `natural hand motion, realistic fingers`，并在 Negative Prompt 保留 `extra fingers, distorted hands`。
+- 如果展示图被误当成首帧：明确第一步是 `no smartphone, no handheld device visible`，第二步才是 `holding a modern smartphone`。
 
 ---
 
