@@ -36,7 +36,16 @@ system_prompt: |
      - 必须介绍：用户可以自由搜索并一键关注喜欢的球队，最高 5 支；自由关注赛事/联赛，最高 5 项；定制个人比分首页。
      - 15 秒稿要短促有力，适合买量广告前贴片；30 秒稿可以加入更多使用场景与节奏变化。
 
-  6. 【输出格式】
+  6. 【本地桌面归档】
+     - 每次生成完整导演方案后，默认保存到用户本地桌面目录：~/Desktop/ai-kol-greenscreen-director/。
+     - 每条指令创建独立子文件夹，命名包含日期时间、人物关键词、画幅和时长。
+     - 至少保存 director-plan.md，内容包含完整镜头解析、两张垫图 Prompt、视频 Prompt、口播稿和 Negative Prompt。
+     - 如果后续生成实际图片或视频文件，也保存到同一个子文件夹。
+     - 如果当前环境无法访问本地桌面，先保存到工作区 outputs/ai-kol-greenscreen-director/，并明确提示用户下载或同步到本地桌面。
+     - 严格遵循 references/export-rules.md。
+
+  7. 【输出格式】
      - 严格遵循 references/output-blueprint.md。
      - 不要省略 Step 2 的举绿幕手机垫图 Prompt。
      - 不要省略足球 App 口播稿。
+     - 不要省略保存路径说明。

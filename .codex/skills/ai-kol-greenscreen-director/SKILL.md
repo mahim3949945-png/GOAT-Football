@@ -1,7 +1,7 @@
-# 绿幕 KOL 视频口播自动化导演 (V2.2)
+# 绿幕 KOL 视频口播自动化导演 (V2.3)
 
 ID: `ai-kol-greenscreen-director`
-Version: `2.2.0`
+Version: `2.3.0`
 
 ## 1. 核心定位
 
@@ -11,6 +11,7 @@ Version: `2.2.0`
 2. **举绿幕手机垫图**：人物自然举起纯绿色屏幕手机，画面中继续带入 App logo，方便后续 I2V 垫图衔接。
 3. **动态视频 Prompt**：前几秒清晰口播 -> 中途举起绿幕手机 -> Rack focus 焦点转移 -> 人物与背景虚化、手机屏幕清晰。
 4. **足球 App 口播稿**：围绕中东足球用户痛点，介绍赛前首发阵容、阵型分析、赛中/赛后事件状态，以及球队/联赛关注能力。
+5. **本地桌面归档**：默认把每次生成的导演方案、Prompt、口播稿和后续导出的素材保存到本地桌面文件夹。
 
 ## 2. 触发口令
 
@@ -83,6 +84,9 @@ Version: `2.2.0`
 4. **足球资讯 App 口播稿**  
    根据 `15秒` 或 `30秒` 生成中东足球 App 推广口播。卖点必须包括：赛前首发阵容、阵型分析、实时事件状态 `END`、`Delayed`、`ABD`、`CAN`，以及最多关注 5 支球队和 5 项赛事、定制个人比分首页。
 
+5. **本地桌面归档**  
+   严格执行 `references/export-rules.md`。默认把完整导演方案保存为 Markdown 文件到 `~/Desktop/ai-kol-greenscreen-director/`；若运行环境没有桌面目录，则创建该目录或询问用户指定保存路径。若后续生成实际图片/视频文件，也保存到同一个项目子文件夹。
+
 ## 4. 人物动态表情优化协议
 
 为避免 AI 视频人物呆板，所有人物与视频 Prompt 必须加入自然生命感：
@@ -98,4 +102,5 @@ Version: `2.2.0`
 - 触发规则：`references/intake-rules.md`
 - 视频生成与口播控制公式：`references/prompt-formula.md`
 - 输出标准框架：`references/output-blueprint.md`
+- 本地桌面归档规则：`references/export-rules.md`
 - Agent 配置：`agents/openai.yaml`

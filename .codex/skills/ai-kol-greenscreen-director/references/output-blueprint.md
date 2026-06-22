@@ -83,17 +83,23 @@ Logo 使用 (Logo Integration)：
 🚫 Negative Prompt / 避免项
 
 [输出 references/prompt-formula.md 中的视频 Negative Prompt，并可根据具体人物或场景补充。]
+
+💾 本地保存 (Local Save)
+
+[严格执行 references/export-rules.md。将完整导演方案保存为 director-plan.md，默认路径为 ~/Desktop/ai-kol-greenscreen-director/[本次子文件夹]/。如果当前环境无法访问本地桌面，则保存到 outputs/ai-kol-greenscreen-director/[本次子文件夹]/，并提示用户下载或同步到本地桌面。]
 ```
 
 ## 输出要求
 
 - 不要省略第二步“举绿幕手机垫图”。
 - 不要省略第四步“足球 App 口播稿”。
+- 不要省略本地保存路径说明。
 - 第一步必须明确 `No smartphone`。
 - 第二步必须明确手机屏幕为 `completely solid bright chroma key green`。
 - Step 1 和 Step 2 必须连带用户上传的 App logo 一起生成，但 Step 2 的纯绿手机屏幕上不能出现 logo。
 - 第三步必须明确 `rack focus`，并说明焦点从人脸转移到手机绿屏。
 - 如果用户没有指定时长，必须先问 15秒还是30秒。
 - 口播稿必须包含：首发阵容、阵型分析、END、Delayed、ABD、CAN、最多关注 5 支球队、最多关注 5 项赛事/联赛、定制个人比分首页。
+- 默认把完整导演方案保存到 `~/Desktop/ai-kol-greenscreen-director/`；如果无法访问本地桌面，则保存到工作区 `outputs/ai-kol-greenscreen-director/` 并说明原因。
 - 所有步骤都必须保持背景干净：无背景人物、无杂乱道具、无立柱。
 - 所有视频动作描述都必须避免僵硬感，加入自然口播表情、呼吸、眨眼、轻微头部动作和适中语速。
