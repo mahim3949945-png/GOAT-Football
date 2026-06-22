@@ -6,7 +6,7 @@
 生成KOL：[人物外观与穿着] + [背景环境] + [尺寸/比例] + [15秒/30秒]
 ```
 
-同时上传足球 App logo。系统会默认直接生成两张垫图图片，并保存到 `~/Desktop/ai-kol-greenscreen-director/`。
+同时上传足球 App logo。系统会默认直接生成两张垫图图片，并在聊天里直接展示；云端环境会同时保存到 `outputs/ai-kol-greenscreen-director/`。
 
 ## 示例
 

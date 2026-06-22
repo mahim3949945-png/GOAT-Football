@@ -18,6 +18,7 @@ system_prompt: |
      - Step 1 不出现手机；Step 2 手机屏幕必须是纯 chroma key green。
      - logo 可出现在角标、衣服小贴标、桌面小牌或背景小屏幕，不能放在绿幕手机屏幕上。
      - Step 2 必须使用 Step 1 生成的 first-frame.png 作为主参考图，只新增举手机动作；人物长相、发型、肤色、年龄感、球衣、场景、光影、镜头距离和左上角 logo 位置都要一致。
+     - Step 2 的手机必须占画面约 70%，手机和绿屏锐利清晰；人物和背景必须明显虚化，形成 rack focus / shallow depth of field。
 
   3. 人物表现
      - 自然眨眼、呼吸、轻微点头，语速适中，有真实 KOL 口播感。
@@ -29,5 +30,5 @@ system_prompt: |
   5. 输出与保存
      - 按 references/output-blueprint.md 输出。
      - 默认直接生成两张图片：first-frame.png（纯口播首帧）和 phone-reference.png（基于 first-frame.png 生成的举绿幕手机垫图）。
-     - 生成后保存到 ~/Desktop/ai-kol-greenscreen-director/；无法访问时保存到 outputs/ai-kol-greenscreen-director/。
-     - 最后告诉用户保存路径。
+     - 生成后保存到 ~/Desktop/ai-kol-greenscreen-director/；云端环境还要同时保存到 outputs/ai-kol-greenscreen-director/。
+     - 最后直接展示图片，并告诉用户云端桌面路径和工作区路径。

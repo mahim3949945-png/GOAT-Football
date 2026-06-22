@@ -18,7 +18,7 @@ Logo 使用：[说明 logo 出现在画面品牌位，不放在绿幕手机屏�
 [套用 Step 1 模板，并直接生成图片：first-frame.png。]
 
 📱 第二步：Midjourney 举绿幕手机垫图 (Step 2: Phone Reference Frame)
-[以 first-frame.png 为主参考图，套用 Step 2 模板生成 phone-reference.png。必须保持同一人物、同一球衣、同一场景、同一光影和同一左上角 logo 位置，只新增举纯绿屏手机动作。]
+[以 first-frame.png 为主参考图，套用 Step 2 模板生成 phone-reference.png。必须保持同一人物、同一球衣、同一场景、同一光影和同一左上角 logo 位置。手机必须占画面约 70%，绿屏手机清晰锐利，人物和背景明显虚化。]
 
 🎥 第三步：Kling / Runway 视频动作 Prompt (Step 3: I2V Motion Prompt)
 [套用 Step 3 模板。]
@@ -30,7 +30,7 @@ Logo 使用：[说明 logo 出现在画面品牌位，不放在绿幕手机屏�
 [输出精简 Negative Prompt。]
 
 💾 本地保存 (Local Save)
-[保存 director-plan.md、first-frame.png、phone-reference.png。优先保存到 ~/Desktop/ai-kol-greenscreen-director/[本次子文件夹]/；无法访问桌面时保存到 outputs/ai-kol-greenscreen-director/[本次子文件夹]/。]
+[保存 director-plan.md、first-frame.png、phone-reference.png。优先保存到 ~/Desktop/ai-kol-greenscreen-director/[本次子文件夹]/；云端环境同时保存到 outputs/ai-kol-greenscreen-director/[本次子文件夹]/，并在聊天里直接展示图片。]
 ```
 
 ## 输出要求
@@ -38,6 +38,7 @@ Logo 使用：[说明 logo 出现在画面品牌位，不放在绿幕手机屏�
 - 四步都要输出。
 - 默认直接生成两张垫图图片，不只给 Prompt。
 - 第二张图必须基于第一张图生成，保证人物和场景一致。
+- 第二张图手机必须占画面约 70%，人物和背景必须虚化。
 - 绿幕手机屏幕只允许纯绿色。
 - logo 不能放在绿幕手机屏幕上。
 - 保留足球 App 核心卖点。

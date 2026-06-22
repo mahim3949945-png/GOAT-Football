@@ -1,6 +1,6 @@
 # I2V Prompt 公式
 
-通用要求：背景干净、无背景人物、无杂物、无立柱；人物自然口播，有眨眼、呼吸和轻微点头；logo 只做轻量品牌露出，不放在绿幕手机屏幕上。Step 2 必须基于 Step 1 的 `first-frame.png` 生成，保持人物和场景一致。
+通用要求：背景干净、无背景人物、无杂物、无立柱；人物自然口播，有眨眼、呼吸和轻微点头；logo 只做轻量品牌露出，不放在绿幕手机屏幕上。Step 2 必须基于 Step 1 的 `first-frame.png` 生成，保持人物和场景一致；手机占画面约 70%，手机清晰，人物和背景虚化。
 
 ## Step 1: Midjourney 纯口播首帧垫图 Prompt 模板
 
@@ -17,7 +17,7 @@
 主参考图：`first-frame.png`
 
 ```text
-[Use first-frame.png as the primary image reference] Keep the exact same person, face, age, hairstyle, skin tone, outfit, Real Madrid jersey, camera angle, lens distance, lighting, futuristic esports room, clean background, and upper-left app logo placement from the reference image. Only change the action: the subject naturally holds a modern smartphone toward the camera. The phone screen is solid bright chroma key green, no icons, no text, no reflections, no logo. Phone does not fully cover the face; eyes and expression remain visible. No new background objects, no new people, no columns. Photorealistic, cinematic lighting, 8k [画幅参数] --style raw --v 6.0
+[Use first-frame.png as the primary image reference] Keep the exact same person, face, age, hairstyle, skin tone, outfit, Real Madrid jersey, lighting, futuristic esports room, clean background, and upper-left app logo placement from the reference image. Only change the action and focus: the subject holds a modern smartphone very close to the camera in the foreground. The smartphone occupies about 70% of the frame and is the sharpest object. The phone screen is solid bright chroma key green, no icons, no text, no reflections, no logo. The subject remains behind the phone and becomes visibly blurred; the background also becomes blurred bokeh, cinematic rack focus / shallow depth of field. No new background objects, no new people, no columns. Photorealistic, cinematic lighting, 8k [画幅参数] --style raw --v 6.0
 ```
 
 ## Step 3: 视频大模型直出 Prompt 模板

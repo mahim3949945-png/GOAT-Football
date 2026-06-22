@@ -1,7 +1,7 @@
-# 绿幕 KOL 视频口播自动化导演 (V2.6)
+# 绿幕 KOL 视频口播自动化导演 (V2.7)
 
 ID: `ai-kol-greenscreen-director`
-Version: `2.6.0`
+Version: `2.7.0`
 
 ## 核心定位
 
@@ -32,9 +32,10 @@ Version: `2.6.0`
 
 - 背景干净：无背景人物、无杂物、无立柱。
 - 人物自然：眨眼、呼吸、轻微点头、语速适中，避免僵硬。
-- 一致性锁定：`phone-reference.png` 必须基于 `first-frame.png` 生成，保持人物长相、年龄感、发型、肤色、球衣、场景、镜头距离、光影和左上角 logo 位置一致；只新增“举起纯绿屏手机”动作。
+- 一致性锁定：`phone-reference.png` 必须基于 `first-frame.png` 生成，保持人物长相、年龄感、发型、肤色、球衣、场景、光影和左上角 logo 位置一致；只新增“举起纯绿屏手机”动作。
+- 第二张构图：手机必须在前景占画面约 70%，绿屏手机清晰锐利；人物和背景必须明显虚化，形成 rack focus / shallow depth of field 效果。
 - App 卖点：首发阵容、阵型分析、`END`、`Delayed`、`ABD`、`CAN`、最多关注 5 支球队和 5 项赛事/联赛、定制比分首页。
-- 默认保存到 `~/Desktop/ai-kol-greenscreen-director/`；无法访问桌面时保存到 `outputs/ai-kol-greenscreen-director/`。
+- 默认保存到 `~/Desktop/ai-kol-greenscreen-director/`；云端环境还必须同时保存到 `outputs/ai-kol-greenscreen-director/` 并在聊天里直接展示图片，避免用户找不到本地桌面文件。
 - 图片文件命名：`first-frame.png`、`phone-reference.png`。
 
 ## 参考文件
