@@ -1,6 +1,6 @@
 # 输出蓝图
 
-当用户输入符合 `生成KOL：[人物] + [场景] + [尺寸] + [15秒/30秒]`，并提供足球 App logo 后，严格按以下结构输出。
+当用户输入符合 `生成KOL：[人物] + [场景] + [尺寸] + [15秒/30秒]`，并提供足球 App logo 后，直接生成两张垫图图片，并按以下结构输出。
 
 ## 标准输出结构
 
@@ -15,10 +15,10 @@ Logo 使用：[说明 logo 出现在画面品牌位，不放在绿幕手机屏�
 时间轴：[0-3s 纯口播] -> [举起绿幕手机] -> [rack focus 到绿屏手机]。
 
 🖼️ 第一步：Midjourney 纯口播首帧垫图 (Step 1: First Frame)
-[套用 Step 1 模板。]
+[套用 Step 1 模板，并直接生成图片：first-frame.png。]
 
 📱 第二步：Midjourney 举绿幕手机垫图 (Step 2: Phone Reference Frame)
-[套用 Step 2 模板。]
+[套用 Step 2 模板，并直接生成图片：phone-reference.png。]
 
 🎥 第三步：Kling / Runway 视频动作 Prompt (Step 3: I2V Motion Prompt)
 [套用 Step 3 模板。]
@@ -30,12 +30,13 @@ Logo 使用：[说明 logo 出现在画面品牌位，不放在绿幕手机屏�
 [输出精简 Negative Prompt。]
 
 💾 本地保存 (Local Save)
-[保存为 director-plan.md。优先保存到 ~/Desktop/ai-kol-greenscreen-director/[本次子文件夹]/；无法访问桌面时保存到 outputs/ai-kol-greenscreen-director/[本次子文件夹]/。]
+[保存 director-plan.md、first-frame.png、phone-reference.png。优先保存到 ~/Desktop/ai-kol-greenscreen-director/[本次子文件夹]/；无法访问桌面时保存到 outputs/ai-kol-greenscreen-director/[本次子文件夹]/。]
 ```
 
 ## 输出要求
 
 - 四步都要输出。
+- 默认直接生成两张垫图图片，不只给 Prompt。
 - 绿幕手机屏幕只允许纯绿色。
 - logo 不能放在绿幕手机屏幕上。
 - 保留足球 App 核心卖点。

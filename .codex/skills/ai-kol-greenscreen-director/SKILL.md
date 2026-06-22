@@ -1,11 +1,11 @@
-# 绿幕 KOL 视频口播自动化导演 (V2.4)
+# 绿幕 KOL 视频口播自动化导演 (V2.5)
 
 ID: `ai-kol-greenscreen-director`
-Version: `2.4.0`
+Version: `2.5.0`
 
 ## 核心定位
 
-把用户的 KOL 指令快速整理成中东足球资讯 App 广告素材方案，输出两张 Midjourney 垫图 Prompt、一个 I2V 视频 Prompt 和一段 15 秒或 30 秒口播稿。
+把用户的 KOL 指令快速整理成中东足球资讯 App 广告素材方案，并默认直接生成两张垫图图片：纯口播首帧、举绿幕手机垫图。同时输出 I2V 视频 Prompt 和 15 秒或 30 秒口播稿。
 
 ## 输入要求
 
@@ -22,8 +22,8 @@ Version: `2.4.0`
 ## 输出内容
 
 1. 镜头设定解析
-2. Step 1：纯口播首帧垫图 Prompt，不出现手机，带 App logo
-3. Step 2：举绿幕手机垫图 Prompt，手机屏幕纯绿色，logo 不放在手机屏幕上
+2. Step 1：直接生成纯口播首帧图片，并保留 Prompt
+3. Step 2：直接生成举绿幕手机垫图图片，并保留 Prompt
 4. Step 3：I2V 视频 Prompt，清晰口播 -> 举手机 -> rack focus 到绿屏手机
 5. Step 4：足球 App 口播稿
 6. 保存路径说明
@@ -34,6 +34,7 @@ Version: `2.4.0`
 - 人物自然：眨眼、呼吸、轻微点头、语速适中，避免僵硬。
 - App 卖点：首发阵容、阵型分析、`END`、`Delayed`、`ABD`、`CAN`、最多关注 5 支球队和 5 项赛事/联赛、定制比分首页。
 - 默认保存到 `~/Desktop/ai-kol-greenscreen-director/`；无法访问桌面时保存到 `outputs/ai-kol-greenscreen-director/`。
+- 图片文件命名：`first-frame.png`、`phone-reference.png`。
 
 ## 参考文件
 

@@ -4,11 +4,15 @@
 
 ## Step 1: Midjourney 纯口播首帧垫图 Prompt 模板
 
+生成图片文件名：`first-frame.png`
+
 ```text
 [App logo image reference] Medium shot, [人物扩写], speaking directly to camera for a Middle East football app ad. Natural KOL energy, expressive eyes, subtle blinking, relaxed breathing, slight head movement. Face in sharp focus. [场景扩写], clean uncluttered background, no background characters, no props, no columns. Subtle app logo branding outside the face area. No smartphone, no object in hands. Photorealistic, cinematic lighting, 8k [画幅参数] --style raw --v 6.0
 ```
 
 ## Step 2: Midjourney 举绿幕手机垫图 Prompt 模板
+
+生成图片文件名：`phone-reference.png`
 
 ```text
 [App logo image reference] Medium close-up shot, [人物扩写], naturally holding a modern smartphone toward the camera. The phone screen is solid bright chroma key green, no icons, no text, no reflections, no logo. Phone does not fully cover the face; eyes and expression remain visible. Subtle app logo branding outside the phone screen. [场景扩写], clean uncluttered background, no background characters, no props, no columns. Photorealistic, cinematic lighting, 8k [画幅参数] --style raw --v 6.0
