@@ -1,6 +1,6 @@
 # I2V Prompt 公式
 
-通用要求：背景干净、无背景人物、无杂物、无立柱；人物自然口播，有眨眼、呼吸和轻微点头；logo 只做轻量品牌露出，不放在绿幕手机屏幕上。
+通用要求：背景干净、无背景人物、无杂物、无立柱；人物自然口播，有眨眼、呼吸和轻微点头；logo 只做轻量品牌露出，不放在绿幕手机屏幕上。Step 2 必须基于 Step 1 的 `first-frame.png` 生成，保持人物和场景一致。
 
 ## Step 1: Midjourney 纯口播首帧垫图 Prompt 模板
 
@@ -14,8 +14,10 @@
 
 生成图片文件名：`phone-reference.png`
 
+主参考图：`first-frame.png`
+
 ```text
-[App logo image reference] Medium close-up shot, [人物扩写], naturally holding a modern smartphone toward the camera. The phone screen is solid bright chroma key green, no icons, no text, no reflections, no logo. Phone does not fully cover the face; eyes and expression remain visible. Subtle app logo branding outside the phone screen. [场景扩写], clean uncluttered background, no background characters, no props, no columns. Photorealistic, cinematic lighting, 8k [画幅参数] --style raw --v 6.0
+[Use first-frame.png as the primary image reference] Keep the exact same person, face, age, hairstyle, skin tone, outfit, Real Madrid jersey, camera angle, lens distance, lighting, futuristic esports room, clean background, and upper-left app logo placement from the reference image. Only change the action: the subject naturally holds a modern smartphone toward the camera. The phone screen is solid bright chroma key green, no icons, no text, no reflections, no logo. Phone does not fully cover the face; eyes and expression remain visible. No new background objects, no new people, no columns. Photorealistic, cinematic lighting, 8k [画幅参数] --style raw --v 6.0
 ```
 
 ## Step 3: 视频大模型直出 Prompt 模板
