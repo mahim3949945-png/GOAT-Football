@@ -68,7 +68,7 @@ Include one negative prompt focused on:
 - Blurry phone or distorted hands.
 - Logos / UI / watermarks.
 
-## 5. Step 4 - 30 秒足球 App 口播稿
+## 5. Step 4 - 30 秒足球 App 阿拉伯语口播稿
 
 For the default 30-second script, use this rhythm:
 
@@ -91,6 +91,12 @@ Required feature mentions:
 - 定制比分首页
 
 If the user specifies a non-30-second duration, keep the same order and compress or expand the sections proportionally.
+
+Default voiceover language:
+
+- Arabic.
+- Keep status labels as product labels: `END`, `Delayed`, `ABD`, `CAN`.
+- Keep the delivery conversational, clear, and suitable for a Middle East football audience.
 
 ## 6. 保存路径说明
 
@@ -123,3 +129,13 @@ After generation:
   - Workspace output path.
   - Exact file names.
 - Keep the final response concise and action-oriented.
+
+## HeyGen Handoff
+
+When sending the generated assets to HeyGen:
+
+- Prefer image mode when the digital human changes per request.
+- Use `first-frame.png` as the image source for the talking avatar.
+- HeyGen requires a public HTTPS image URL; local workspace paths cannot be passed directly to the API.
+- Use an Arabic `voice_id`.
+- Use `phone-reference.png` as a visual reference for the later rack-focus / green-screen phone shot in downstream editing or I2V tools.

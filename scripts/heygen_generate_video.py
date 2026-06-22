@@ -4,13 +4,13 @@
 Required environment variables:
   HEYGEN_API_KEY
 
-For avatar mode:
-  HEYGEN_AVATAR_ID
-  HEYGEN_VOICE_ID
-
 For image mode:
   HEYGEN_VOICE_ID
   pass --image-url https://...
+
+For avatar mode:
+  HEYGEN_AVATAR_ID
+  HEYGEN_VOICE_ID
 
 The script intentionally reads secrets from environment variables instead of
 hardcoding them in source files or command history.
@@ -181,8 +181,16 @@ def download_video(video_url: str, output_path: Path) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Generate a HeyGen video from an avatar or public image URL.")
-    parser.add_argument("--mode", choices=["avatar", "image"], default="avatar")
+    parser = argparse.ArgumentParser(description="Generate a HeyGen video from a public image URL or fixed avatar.")
+    parser.add_argument(
+        "--mode",
+        choices=["image", "avatar"],
+        default="image",
+        help=(
+            "Use image mode when the digital human changes per KOL request. "
+            "Use avatar mode only for a fixed HeyGen avatar_id."
+        ),
+    )
     parser.add_argument("--script-file", default=str(DEFAULT_SCRIPT_FILE))
     parser.add_argument("--text", help="Voiceover text. Overrides --script-file.")
     parser.add_argument("--title", default="AI KOL Greenscreen Director")
