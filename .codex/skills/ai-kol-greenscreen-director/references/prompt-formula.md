@@ -78,6 +78,18 @@
 clean, completely uncluttered background, no background characters, no extra people, no crowds, no extraneous props, no messy objects, no columns, no poles, no vertical obstructions
 ```
 
+## 图片比例硬约束
+
+Step 1 和 Step 2 的图片最终交付必须是 **9:16 vertical portrait image**。
+
+生成与交付要求：
+
+- Prompt 中必须明确 `vertical 9:16 portrait composition`。
+- 推荐最终尺寸为 `1080x1920` 或 `1440x2560`。
+- 如果图片工具返回横图、方图或任何非 9:16 图片，不要直接交付；先用居中裁切、扩展补边或模糊背景补边处理成 9:16。
+- 处理时必须保护人物面部、绿幕手机和主要视觉中心，不要裁掉脸、手或手机屏幕。
+- 文件名建议加入 `9x16`，例如 `kol-first-frame-[人物关键词]-[时长]-9x16.png`。
+
 ## Promo Script: 中东足球资讯 App 推广口播稿公式
 
 用途：生成可配音、可字幕、可给真人 KOL 参考的短口播稿。口播稿应与人物身份和场景气质匹配。
@@ -142,7 +154,7 @@ If you follow football every day, stop jumping between different apps for news, 
 用途：直接生成演员定妆和视频首帧。此阶段必须是纯口播画面，不允许手机提前出现。
 
 ```text
-Medium shot, [人物高精度扩写描述], speaking directly to the camera like a real football fan creator promoting a football news app for Middle Eastern fans, authentic creator energy, lively eyes, natural mouth movement, subtle micro-expressions, slight head tilt, relaxed shoulders, gentle forward lean, spontaneous mid-speech expression. Focus strictly concentrated on the subject's face, highly detailed facial expressions, sharp eyes, clear facial features, natural skin texture. The presenter looks like they are naturally delivering an app recommendation about football news, match updates, fixtures, and transfer stories. Situated in [场景高精度扩写描述]. Clean, completely uncluttered background, no background characters, no extra people, no crowds, no extraneous props, no messy objects, no columns, no poles, no vertical obstructions. The subject's hands stay naturally out of the foreground, no smartphone, no phone screen, no green screen, no handheld device visible. Warm ambient lighting, soft cinematic key light, candid high-end UGC football app ad style, photorealistic, 8k, cinematic lighting --ar 9:16 --style raw --v 6.0
+Vertical 9:16 portrait composition, medium shot, [人物高精度扩写描述], speaking directly to the camera like a real football fan creator promoting a football news app for Middle Eastern fans, authentic creator energy, lively eyes, natural mouth movement, subtle micro-expressions, slight head tilt, relaxed shoulders, gentle forward lean, spontaneous mid-speech expression. Focus strictly concentrated on the subject's face, highly detailed facial expressions, sharp eyes, clear facial features, natural skin texture. The presenter looks like they are naturally delivering an app recommendation about football news, match updates, fixtures, and transfer stories. Situated in [场景高精度扩写描述]. Clean, completely uncluttered background, no background characters, no extra people, no crowds, no extraneous props, no messy objects, no columns, no poles, no vertical obstructions. The subject's hands stay naturally out of the foreground, no smartphone, no phone screen, no green screen, no handheld device visible. Final image must be a 9:16 vertical portrait, centered face, no horizontal or square framing. Warm ambient lighting, soft cinematic key light, candid high-end UGC football app ad style, photorealistic, 8k, cinematic lighting --ar 9:16 --style raw --v 6.0
 ```
 
 ### Step 1 Negative Prompt 建议
@@ -156,7 +168,7 @@ background people, crowd, columns, poles, clutter, messy props, phone, smartphon
 用途：直接生成一张人物拿着绿幕手机的图片。此图用于终帧参考、展示姿势参考或素材扩展，**不得替代 Step 1 视频首帧**。
 
 ```text
-Medium close-up, [人物高精度扩写描述], holding a modern smartphone naturally in one hand and presenting it toward the camera while recommending a football news app for Middle Eastern fans, authentic football fan creator energy, lively eyes, spontaneous mid-speech expression, relaxed shoulders, subtle head tilt, natural hand posture. The smartphone is in the foreground with its screen clearly visible, perfectly flat, completely solid, bright chroma key green, evenly lit, no UI, no text, no reflections, no patterns, no cracks, no black borders. The subject still feels like a real person speaking about football news, match updates, fixtures, and transfer stories, not a posed model. Situated in [场景高精度扩写描述]. Clean, completely uncluttered background, no background characters, no extra people, no crowds, no extraneous props, no messy objects, no columns, no poles, no vertical obstructions. Cinematic rack-focus look, the green phone screen is crisp and prominent while the subject's expressive face remains recognizable with gentle natural softness, warm ambient lighting, soft cinematic key light, candid high-end UGC football app ad style, photorealistic, 8k, cinematic lighting --ar 9:16 --style raw --v 6.0
+Vertical 9:16 portrait composition, medium close-up, [人物高精度扩写描述], holding a modern smartphone naturally in one hand and presenting it toward the camera while recommending a football news app for Middle Eastern fans, authentic football fan creator energy, lively eyes, spontaneous mid-speech expression, relaxed shoulders, subtle head tilt, natural hand posture. The smartphone is in the foreground with its screen clearly visible, perfectly flat, completely solid, bright chroma key green, evenly lit, no UI, no text, no reflections, no patterns, no cracks, no black borders. The subject still feels like a real person speaking about football news, match updates, fixtures, and transfer stories, not a posed model. Situated in [场景高精度扩写描述]. Clean, completely uncluttered background, no background characters, no extra people, no crowds, no extraneous props, no messy objects, no columns, no poles, no vertical obstructions. Final image must be a 9:16 vertical portrait, phone screen and face both safely inside frame, no horizontal or square framing. Cinematic rack-focus look, the green phone screen is crisp and prominent while the subject's expressive face remains recognizable with gentle natural softness, warm ambient lighting, soft cinematic key light, candid high-end UGC football app ad style, photorealistic, 8k, cinematic lighting --ar 9:16 --style raw --v 6.0
 ```
 
 ### Step 2 Negative Prompt 建议
@@ -205,9 +217,11 @@ phone visible at start, early phone reveal, stiff pose, frozen expression, manne
 - 是否避免了直播版权、博彩、中奖等未经授权承诺。
 - Step 1 是否完全无手机。
 - Step 1 是否直接生成图片。
+- Step 1 最终交付图片是否为 9:16 竖图。
 - Step 1 是否加入了真人口播灵动感，而不是僵硬证件照。
 - Step 2 是否是一张独立的拿手机展示图，且没有被当作视频首帧。
 - Step 2 是否直接生成图片。
+- Step 2 最终交付图片是否为 9:16 竖图。
 - Step 2 的手机屏幕是否为纯 chroma key green。
 - Step 3 是否使用对应的 15 秒或 30 秒时间轴。
 - Step 3 是否明确写出手机出现前无手机。

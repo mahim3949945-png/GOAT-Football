@@ -10,7 +10,7 @@
 
 不要生成口播稿、图片或视频 Prompt。
 
-如果包含时长，必须严格按以下结构输出。不要省略任一部分。当前环境支持图片生成工具时，Step 1 和 Step 2 必须先直接生成图片，再输出复用 Prompt。
+如果包含时长，必须严格按以下结构输出。不要省略任一部分。当前环境支持图片生成工具时，Step 1 和 Step 2 必须先直接生成图片，再输出复用 Prompt。两张图片最终交付都必须是 9:16 竖图。
 
 ---
 
@@ -67,7 +67,7 @@
 > 直接生成演员定妆图 / 视频首帧。此图必须只有人物口播状态，不允许提前举起手机。生成后保留以下 Prompt 作为复用记录。
 
 **Image Generation：**  
-[直接生成图片。文件名建议：`kol-first-frame-[人物关键词]-[时长].png`]
+[直接生成 9:16 竖图。文件名建议：`kol-first-frame-[人物关键词]-[时长]-9x16.png`。如果生成工具返回非 9:16，先裁切或补边成 9:16 再交付。]
 
 **Reusable Prompt：**
 
@@ -88,7 +88,7 @@
 > 直接生成一张人物拿着纯绿幕手机的图片。此图用于终帧参考、展示姿势参考或素材扩展，不能替代第一步视频首帧。生成后保留以下 Prompt 作为复用记录。
 
 **Image Generation：**  
-[直接生成图片。文件名建议：`kol-phone-holding-[人物关键词]-[时长].png`]
+[直接生成 9:16 竖图。文件名建议：`kol-phone-holding-[人物关键词]-[时长]-9x16.png`。如果生成工具返回非 9:16，先裁切或补边成 9:16 再交付。]
 
 **Reusable Prompt：**
 
@@ -124,6 +124,7 @@
 
 - 如果手机在开头就出现：重抽或加强 `no smartphone visible at the beginning`。
 - 如果用户没给时长：不要继续生成，先问 15 秒还是 30 秒。
+- 如果生成图片不是 9:16：不要直接交付，先处理成 9:16 竖图。
 - 如果 30 秒视频太早举手机：加强 `from 5-15 seconds, still no smartphone visible`。
 - 如果人物看起来呆板：加强 `authentic creator energy, lively eyes, subtle micro-expressions, spontaneous mid-speech expression, slight head tilt, relaxed shoulders`。
 - 如果口播文案跑题：确保 Hook、价值点和 CTA 都围绕中东足球资讯 App，不要写成泛足球评论。
@@ -141,4 +142,5 @@
 - 中文部分只用于导演解析，不要混入英文 Prompt 模板内部的变量说明。
 - 口播稿必须与中东足球资讯 App 推广相关。
 - Step 1 和 Step 2 是直接图片生成任务；不要只输出 Prompt 而不生成图片，除非当前环境没有图片生成能力。
+- Step 1 和 Step 2 的最终图片必须是 9:16 竖图；非 9:16 原图只能作为中间产物，不能作为最终交付图。
 - 不要输出与本工作流无关的营销文案或投放策略，除非用户额外要求。
